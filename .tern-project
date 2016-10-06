@@ -1,0 +1,20 @@
+{
+  "ecmaVersion": 7,
+  "libs": [
+    "browser",
+    "jquery"
+  ],
+  "loadEagerly": [
+    "src/**/*.js"
+  ],
+  "plugins": {
+    "complete_strings": {
+      "maxLength": 15
+    },
+    "node": {},
+    "doc_comment": {
+      "fullDocs": true,
+      "strong": true
+    }
+  }
+}
