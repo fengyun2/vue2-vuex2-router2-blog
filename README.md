@@ -5,7 +5,7 @@
 ## 技术
 
 - vue2
-- vue-router
+- vue-router2
 - vuex2
 - fetch
 - node
@@ -29,8 +29,13 @@ npm run build
 - 在 actions.js 中书写 request 请求, 实现数据请求复用
 - 从 getters.js 中读取数据
 - vue 组件不可以直接修改state中的数据, 只能通过 dispatch 一个 action, 通知 mutations 去修改 state
+- vuex2.x 比 vuex1.x 的 actions.js 不一样了, 由原来的 `dispatch` 改为了 `commit` 分发事件了
 
 ## 升级日志
+
+### 2016/10/07
+
+- 升级vue1.x 到 vue2.x
 
 ### 2016/09/30
 

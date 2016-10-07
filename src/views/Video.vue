@@ -13,25 +13,9 @@
 </template>
 
 <script>
-import {
-  getVideos
-} from '../vuex/getters'
-
-import {
-  displayVideo
-} from '../vuex/actions'
-
 export default {
   data () {
     return {}
-  },
-  vuex: {
-    getters: {
-      videos: getVideos
-    },
-    actions: {
-      getVideos: displayVideo
-    }
   },
   computed: {
     videos () {

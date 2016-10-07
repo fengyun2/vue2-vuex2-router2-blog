@@ -17,30 +17,22 @@
 </template>
 
 <script>
-import {
-  getTopics
-} from '../vuex/getters'
-
-import {
-  fetchTopoicList
-} from '../vuex/actions'
-
 export default {
   data () {
     return {}
   },
-  vuex: {
-    getters: {
-      topics: getTopics
-    },
-    actions: {
-      getTopics: fetchTopoicList
+  computed: {
+    topics () {
+      return this.$store.getters.getTopics
     }
   },
-  computed: {},
-  ready () {},
+  mounted () {},
   attached () {},
-  methods: {},
+  methods: {
+    getTopics () {
+      this.$store.dispatch('fetchTopoicList')
+    }
+  },
   components: {}
 }
 </script>

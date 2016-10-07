@@ -29,29 +29,22 @@
 </template>
 
 <script>
-import {
-  getArticles
-} from '../vuex/getters'
-
-import {
-  fetchArticleList
-} from '../vuex/actions'
 export default {
   data () {
     return {}
   },
-  vuex: {
-    getters: {
-      articles: getArticles
-    },
-    actions: {
-      getArticles: fetchArticleList
+  computed: {
+    articles () {
+      return this.$store.getters.getArticles
     }
   },
-  computed: {},
-  ready () {},
+  mounted () {},
   attached () {},
-  methods: {},
+  methods: {
+    getArticles () {
+      this.$store.dispatch('fetchArticleList')
+    }
+  },
   components: {}
 }
 </script>
