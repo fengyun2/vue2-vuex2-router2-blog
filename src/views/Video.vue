@@ -38,12 +38,22 @@ export default {
       return this.$store.getters.getVideos
     }
   },
-  ready () {},
+  mounted () {
+
+  },
   attached () {},
   methods: {
     getVideos () {
+      // console.log(this.$store)
+      this.$store.dispatch('displayVideo')
+
+      setTimeout(() => {
+        this.computeVideos()
+      }, 2000)
+    },
+    computeVideos () {
+      console.log('getVideos: ==> ')
       console.log(this.$store)
-      this.$store._actions.displayVideo
     }
   },
   components: {}

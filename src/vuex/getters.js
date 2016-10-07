@@ -1,6 +1,6 @@
 /**
 * @Date:   2016-09-27T22:50:20+08:00
-* @Last modified time: 2016-09-30T16:35:27+08:00
+* @Last modified time: 2016-10-07T13:20:28+08:00
 */
 
 /* getters.js */
@@ -17,3 +17,9 @@ export const getVideos = (state) => state.videos */
 export const getArticles = ({article}) => article.list
 export const getTopics = ({topic}) => topic.list
 export const getVideos = ({video}) => video.list
+
+export default {
+  getArticles,
+  getTopics,
+  getVideos
+}

@@ -1,6 +1,6 @@
 /**
 * @Date:   2016-09-27T22:50:03+08:00
-* @Last modified time: 2016-10-07T12:12:48+08:00
+* @Last modified time: 2016-10-07T13:06:03+08:00
 */
 
 /**
@@ -90,14 +90,15 @@ const _get = ({url, query}) => {
  * @return {[type]}                  [description]
  */
 
-export const fetchArticleList = ({dispatch}, page = 5) => {
+export const fetchArticleList = ({ commit }, page = 5) => {
   const url = '/articles'
   const query = `page=${page}`
   return _get({url, query})
   .then((json) => {
     if (json.success) {
       console.log('json-success: ', json.data)
-      return dispatch('DISPLAY_ARTICLE', json.data)
+      /* return dispatch('DISPLAY_ARTICLE', json.data) */
+      return commit('DISPLAY_ARTICLE', json.data)
     }
     return Promise.reject(new Error('fetchArticleList fail'))
   })
@@ -114,14 +115,15 @@ export const fetchArticleList = ({dispatch}, page = 5) => {
  * @return {[type]}                 [description]
  */
 
-export const fetchTopoicList = ({dispatch}, page = 5) => {
+export const fetchTopoicList = ({commit}, page = 5) => {
   const url = '/topics'
   const query = `page=${page}`
   return _get({url, query})
   .then((json) => {
     if (json.success) {
       console.log('json-success: ', json.data)
-      return dispatch('DISPLAY_TOPIC', json.data)
+      /* return dispatch('DISPLAY_TOPIC', json.data) */
+      return commit('DISPLAY_TOPIC', json.data)
     }
     return Promise.reject(new Error('fetchTopoicList fail'))
   })
@@ -143,7 +145,7 @@ export const fetchTopoicList = ({dispatch}, page = 5) => {
  * @return {[type]}              [description]
  */
 
-export const displayVideo = ({dispatch}) => {
+export const displayVideo = ({commit}) => {
   fetch('http://localhost:8081/videos', {
     method: 'GET',
     mode: 'cors',
@@ -161,7 +163,8 @@ export const displayVideo = ({dispatch}) => {
       }
       console.log('获取电影列表成功: ', data.data)
       // 正常返回,别忘了处理错误
-      dispatch('DISPLAY_VIDEO', data.data)
+      /* dispatch('DISPLAY_VIDEO', data.data) */
+      commit('DISPLAY_VIDEO', data.data)
     })
   })
   .catch((err) => {

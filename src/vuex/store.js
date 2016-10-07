@@ -1,6 +1,6 @@
 /**
  * @Date:   2016-09-27T22:49:52+08:00
-* @Last modified time: 2016-10-07T12:12:32+08:00
+* @Last modified time: 2016-10-07T13:16:43+08:00
  */
 
 /**
@@ -25,6 +25,11 @@ import video from './modules/videos'
  * 导入actions
  */
 import actions from './actions'
+
+/**
+ * 导入getters
+ */
+import getters from './getters'
 
 const debug = process.env.NODE_ENV !== 'production'
 Vue.use(Vuex)
@@ -57,7 +62,8 @@ export default new Vuex.Store({
     topic,
     video
   },
-  actions: actions
+  actions: actions,
+  getters: getters
 /* , state,
   mutations, */
 /*  strict: debug, */
