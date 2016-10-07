@@ -1,6 +1,6 @@
 /**
  * @Date:   2016-09-27T22:49:52+08:00
-* @Last modified time: 2016-09-30T16:37:43+08:00
+* @Last modified time: 2016-10-07T10:18:56+08:00
  */
 
 /**
@@ -12,7 +12,7 @@
 
 import Vue from 'vue'
 import Vuex from 'vuex'
-import middlewares from './middlewares'
+/* import middlewares from './middlewares' */
 
 /**
  * 导入各个模块的 [初始状态] 和 [mutations]
@@ -51,9 +51,9 @@ export default new Vuex.Store({
     article,
     topic,
     video
-  },
-/*  state,
-  mutations,*/
-  strict: debug,
-  middlewares
+  }
+/* , state,
+  mutations, */
+/*  strict: debug, */
+/*  middlewares */
 })

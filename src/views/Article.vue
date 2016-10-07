@@ -1,18 +1,18 @@
 <template lang="html">
-  <!-- card-list -->
+
   <ul class="flex-card-list">
-    <!-- card-list-item -->
+
     <li class="flex-card-listitem">
 
       <button type="button" name="button" @click="getArticles">获取文章列表</button>
 
-      <!-- card-module -->
+
       <div class="flex-card" v-for="article in articles">
-        <!-- image container -->
+
         <div class="flex-card-image">
           <img src="../assets/logo.png" alt="logo" />
         </div>
-        <!-- content container -->
+
         <div class="flex-card-content">
           <h3 class="flex-card-heading" v-text="article.title">JavaScript</h3>
           <p v-text="article.content">

@@ -3,31 +3,31 @@
     <div class="bottombar">
       <ul class="dropdown">
         <li :class="{active: show == 'home'}">
-          <a @click="show = 'home'" v-link="{name: 'home'}">
+          <router-link to="/">
             <i class="fa fa-home"></i>
             <span>首页</span>
-          </a>
+          </router-link>
         </li>
 
         <li :class="{active: show == 'topic'}">
-          <a @click="show = 'topic'" v-link="{name: 'topic'}">
+          <router-link to="/topic">
             <i class="fa fa-th"></i>
             <span>专题</span>
-          </a>
+          </router-link>
         </li>
 
         <li :class="{active: show == 'article'}">
-          <a @click="show = 'article'" v-link="{name: 'article'}">
+          <router-link to="/article">
             <i class="fa fa-th"></i>
             <span>热文</span>
-          </a>
+          </router-link>
         </li>
 
         <li :class="{active: show == 'video'}">
-          <a @click="show = 'video'" v-link="{name: 'video'}">
+          <router-link to="/video">
             <i class="fa fa-th"></i>
             <span>获取并展示电影</span>
-          </a>
+          </router-link>
         </li>
       </ul>
 
@@ -41,10 +41,7 @@
 </template>
 
 <script>
-import store from './vuex/store'
 export default {
-  /* 挂载store */
-  store,
   data () {
     return {
       show: 'home'

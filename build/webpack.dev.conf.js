@@ -1,3 +1,10 @@
+/**
+* @Date:   2016-10-07T09:01:38+08:00
+* @Last modified time: 2016-10-07T09:28:05+08:00
+*/
+
+
+
 var config = require('../config')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
@@ -21,7 +28,7 @@ module.exports = merge(baseWebpackConfig, {
       'process.env': config.dev.env
     }),
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
-    new webpack.optimize.OccurenceOrderPlugin(),
+    // new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin

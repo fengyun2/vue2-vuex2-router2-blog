@@ -1,6 +1,6 @@
 /**
 * @Date:   2016-09-27T10:06:00+08:00
-* @Last modified time: 2016-09-30T13:34:28+08:00
+* @Last modified time: 2016-10-07T11:03:35+08:00
 */
 // 注册路由
 export default function (router) {
