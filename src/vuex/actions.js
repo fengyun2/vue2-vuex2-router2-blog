@@ -1,6 +1,6 @@
 /**
 * @Date:   2016-09-27T22:50:03+08:00
-* @Last modified time: 2016-09-30T14:51:20+08:00
+* @Last modified time: 2016-10-07T12:12:48+08:00
 */
 
 /**
@@ -167,4 +167,10 @@ export const displayVideo = ({dispatch}) => {
   .catch((err) => {
     console.log('获取电影列表ajax请求失败: ', err)
   })
+}
+
+export default {
+  fetchArticleList,
+  fetchTopoicList,
+  displayVideo
 }

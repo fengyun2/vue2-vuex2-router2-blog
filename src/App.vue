@@ -3,28 +3,28 @@
     <div class="bottombar">
       <ul class="dropdown">
         <li :class="{active: show == 'home'}">
-          <router-link to="/">
+          <router-link :to="{name: 'home'}">
             <i class="fa fa-home"></i>
             <span>首页</span>
           </router-link>
         </li>
 
         <li :class="{active: show == 'topic'}">
-          <router-link to="/topic">
+          <router-link :to="{name: 'topic', params: {id: 1}}">
             <i class="fa fa-th"></i>
             <span>专题</span>
           </router-link>
         </li>
 
         <li :class="{active: show == 'article'}">
-          <router-link to="/article">
+          <router-link :to="{name: 'article', params: {id: 2}}">
             <i class="fa fa-th"></i>
             <span>热文</span>
           </router-link>
         </li>
 
         <li :class="{active: show == 'video'}">
-          <router-link to="/video">
+          <router-link :to="{name: 'video', params: {id: 3}}">
             <i class="fa fa-th"></i>
             <span>获取并展示电影</span>
           </router-link>

@@ -33,10 +33,19 @@ export default {
       getVideos: displayVideo
     }
   },
-  computed: {},
+  computed: {
+    videos () {
+      return this.$store.getters.getVideos
+    }
+  },
   ready () {},
   attached () {},
-  methods: {},
+  methods: {
+    getVideos () {
+      console.log(this.$store)
+      this.$store._actions.displayVideo
+    }
+  },
   components: {}
 }
 </script>
