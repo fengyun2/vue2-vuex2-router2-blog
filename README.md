@@ -38,6 +38,7 @@ npm run build
 - 更新 `router.js` 路由异步加载
 - 添加全局钩子和组件内的钩子
 - 在 `router.js` 添加滚动行为
+- 通过在 `App.vue` 页面定义的方法可以通过 `router-view` (如: `<router-view transition='display' transition-mode='out-in' :get-app-data="getAppData"></router-view>`) 传递给子元素。
 
 ### 2016/10/07
 

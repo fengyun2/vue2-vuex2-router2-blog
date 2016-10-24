@@ -9,13 +9,18 @@
 
 <script>
 export default {
+  props: ['getAppData'],
   data () {
     return {
       msg: 'Home'
     }
   },
   computed: {},
-  mounted () {},
+  mounted () {
+    console.log('parent: ', this.$parent)
+
+    this.getAppData()
+  },
   attached () {},
   methods: {},
   beforeRouteEnter (to, from, next) {
@@ -23,7 +28,7 @@ export default {
     // 不！能！获取组件实例 `this`
     // 因为当钩子执行前，组件实例还没被创建
     next(vm => {
-      console.log(`我是组件实例vm: `, vm)
+      // console.log(`我是组件实例vm: `, vm)
     })
   },
   beforeRouteLeave (to, from, next) {

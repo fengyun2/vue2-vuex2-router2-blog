@@ -34,7 +34,7 @@
     </div>
 
     <div class="page">
-      <router-view transition='display' transition-mode='out-in'></router-view>
+      <router-view transition='display' transition-mode='out-in' :get-app-data="getAppData"></router-view>
     </div>
 
   </div>
@@ -44,9 +44,26 @@
 export default {
   data () {
     return {
-      show: 'home'
+      show: 'home',
+      transitionName: 'slide-left'
     }
   },
+  // dynamically set transition based on route change
+  watch: {
+    '$route' (to, from) {
+      this.show = to.name
+
+      const toDepth = to.path.split('/').length
+      const fromDepth = from.path.split('/').length
+      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    }
+  },
+  methods: {
+    getAppData () {
+      console.log('我是父类App的方法, 但是我能被子类调用')
+    }
+  },
+
   components: {
   }
 }
