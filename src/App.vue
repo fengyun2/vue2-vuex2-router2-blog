@@ -54,18 +54,19 @@ export default {
 
 <style lang="scss">
 html {
-  height: 100%;
+  height: 200%;
   font-size: 20px;
 }
 body {
   margin: 0;
+  background: lightgreen;
+  height: 100%;
 }
 
 .container {
-  // display: flex;
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  height: 100%;
+  position: relative;
+  height: 50%;
+  vertical-align: middle;
 }
 
 .logo {
@@ -90,12 +91,13 @@ body {
   z-index: 20;
   height: 44px;
   line-height: 44px;
-  top: 0;
+  margin-top: 100px;
   width: 100%;
   padding: 0;
   table-layout: fixed;
   display: block;
   margin-bottom: 20px;
+  background: #eee;
   li {
     display: inline-block;
     font-size: 48px;
@@ -109,6 +111,7 @@ body {
 }
 
 .page {
+  margin-top: 200px;
   display: flex;
   flex-wrap: wrap;
   flex: 1 0 auto;
