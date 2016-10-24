@@ -2,6 +2,13 @@
 * @Date:   2016-09-27T10:06:00+08:00
 * @Last modified time: 2016-10-07T11:03:35+08:00
 */
+
+/**
+ * [已废弃]
+ * 这是vue1.x版本的路由, 现在已经废弃了
+ *
+ */
+
 // 注册路由
 export default function (router) {
   router.map({
